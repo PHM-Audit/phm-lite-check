@@ -4,9 +4,13 @@ Deterministic physics plausibility checking for **LLM outputs** and
 **robotics / embodied-AI datasets**. Zero dependencies, pure standard
 library, Python >= 3.8.
 
-Same rules ship as the **phm-physics-check** plugin on the Dify official
-Marketplace — this package makes the same offline checker importable as a
-plain library and as agent tools for **LangChain** and **AutoGen (v0.4+)**.
+This package is an **independent, community-provided library**: it is the
+offline subset of the PHM physical-judgment engine (proprietary core
+methods are intentionally excluded). A companion plugin
+(`phm-physics-check`) is listed on the Dify Marketplace.
+
+> Not affiliated with, endorsed by, or sponsored by LangChain, AutoGen,
+> or Dify. Integration adapters are community-provided.
 
 ## What it checks
 
@@ -34,9 +38,10 @@ plain library and as agent tools for **LangChain** and **AutoGen (v0.4+)**.
 - **Verdicts**: PASS / WARN / FAIL with structured violation records.
 - **No network calls**: everything runs offline in-process.
 
-> NOTE: this is the OFFLINE SUBSET of the PHM physical-judgment engine.
-> It intentionally excludes proprietary core methods; deployment-specific
-> deep checks are exposed via a configurable remote engine endpoint.
+> NOTE: this package contains only the deterministic offline subset of the
+> PHM physical-judgment engine. Proprietary core methods are intentionally
+> excluded. (Deployment-specific deep checks are available separately via a
+> configurable remote engine endpoint, not included in this package.)
 
 ## Install
 
