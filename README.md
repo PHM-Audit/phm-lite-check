@@ -45,11 +45,26 @@ methods are intentionally excluded). A companion plugin
 
 ## Install
 
+**Option A — from the GitHub repo** (no package index needed):
+
 ```bash
-pip install phm-lite-check          # core (zero dependencies)
-pip install "phm-lite-check[langchain]"   # + langchain-core
+pip install git+https://github.com/PHM-Audit/phm-lite-check
+```
+
+**Option B — from a Release wheel** (faster, no git clone):
+
+```bash
+pip install https://github.com/PHM-Audit/phm-lite-check/releases/download/v1.0.0/phm_lite_check-1.0.0-py3-none-any.whl
+```
+
+**Optional extras** (once installed):
+
+```bash
+pip install "phm-lite-check[langchain]"   # + langchain-core (adapter tests)
 pip install "phm-lite-check[autogen]"     # + autogen-agentchat
 ```
+
+PyPI listing is planned; both options above work today.
 
 ## Quickstart — library
 
