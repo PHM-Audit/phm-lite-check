@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phm-lite-check"
+version = "1.0.0"
+description = "Deterministic physics plausibility checking for LLM outputs and robotics datasets (offline subset of the PHM engine). Zero dependencies."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "PHM-Audit" }]
+keywords = [
+    "llm", "agent", "validation", "physics", "hallucination",
+    "robotics", "dataset-quality", "embodied-ai", "guardrail",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+langchain = ["langchain-core>=0.3"]
+autogen = ["autogen-agentchat>=0.4"]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/PHM-Audit/phm-lite-check"
+
+[tool.setuptools.packages.find]
+include = ["phm_lite_check*"]
