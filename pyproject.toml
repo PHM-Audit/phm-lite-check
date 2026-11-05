@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "phm-lite-check"
-version = "1.0.0"
+version = "1.0.1"
 description = "Deterministic physics plausibility checking for LLM outputs and robotics datasets (offline subset of the PHM engine). Zero dependencies."
 readme = "README.md"
 requires-python = ">=3.8"
@@ -31,10 +31,12 @@ classifiers = [
 [project.optional-dependencies]
 langchain = ["langchain-core>=0.3"]
 autogen = ["autogen-agentchat>=0.4"]
+mcp = ["mcp>=1.0"]
 dev = ["pytest>=7"]
 
 [project.urls]
 Homepage = "https://github.com/PHM-Audit/phm-lite-check"
+Repository = "https://github.com/PHM-Audit/phm-lite-check"
 
 [tool.setuptools.packages.find]
 include = ["phm_lite_check*"]
