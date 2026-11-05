@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.phm-audit/phm-lite-check",
+  "name": "io.github.PHM-Audit/phm-lite-check",
   "title": "PHM Physics Check",
-  "description": "Deterministic physics plausibility checking for LLM outputs and robotics datasets: unit consistency, speed-of-light limit, probability ranges, kinematics, quaternion normalization, timestamp sanity, NaN/Inf scan. Pure stdlib rules, zero network, sub-millisecond verdicts. Offline subset of the PHM engine; checks are necessary, not sufficient.",
+  "description": "Deterministic physics plausibility checks for LLM outputs and robotics data. Offline, stdlib-only.",
   "version": "1.0.1",
   "repository": {
     "url": "https://github.com/PHM-Audit/phm-lite-check",
