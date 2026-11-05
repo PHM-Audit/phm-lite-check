@@ -1,5 +1,7 @@
 # phm-lite-check
 
+<!-- mcp-name: io.github.PHM-Audit/phm-lite-check -->
+
 Deterministic physics plausibility checking for **LLM outputs** and
 **robotics / embodied-AI datasets**. Zero dependencies, pure standard
 library, Python >= 3.8.
@@ -11,6 +13,18 @@ methods are intentionally excluded). A companion plugin
 
 > Not affiliated with, endorsed by, or sponsored by LangChain, AutoGen,
 > or Dify. Integration adapters are community-provided.
+
+## MCP server
+
+This package doubles as a local MCP server (`stdio` transport). After
+installing, point your MCP client at:
+
+```
+python3 -m phm_lite_check.mcp_server
+```
+
+Exposing three tools: `physics_text_check`, `physics_quantity_check`,
+`robotics_data_check`.
 
 ## What it checks
 
