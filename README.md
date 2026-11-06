@@ -135,3 +135,7 @@ pytest tests/ -q
 ## License
 
 MIT
+
+## Benchmark
+
+The judgment rules shipped here are exercised in public by **[DPC-Bench v0.2](https://github.com/PHM-Audit/dpc-bench)** — a paired clean/corrupted physical-consistency detection benchmark (7 task families incl. a real NGSIM I-80 family, three-caliber L1/L2/L3 labels).
