@@ -14,6 +14,18 @@ methods are intentionally excluded). A companion plugin
 > Not affiliated with, endorsed by, or sponsored by LangChain, AutoGen,
 > or Dify. Integration adapters are community-provided.
 
+## Under review — microsoft/PyRIT
+
+A scorer wrapper of this package is under review in
+**[microsoft/PyRIT PR #3507](https://github.com/microsoft/PyRIT/pull/3507)**
+(`physics_consistency_scorer`). Status as of 2026-11-08: six correctness
+issues raised in first-round review (maintainer + automated reviewer) were
+fixed same-day; the PyRIT creator then pushed four follow-up commits on the
+branch, verified 356 scoped tests, Ruff and the scoped type check, and
+approved the PR ("no blocking concerns remain"). Merge is a separate
+maintainer decision and has not happened yet.
+
+
 ## MCP server
 
 This package doubles as a local MCP server (`stdio` transport). After
