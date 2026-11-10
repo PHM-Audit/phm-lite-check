@@ -16,29 +16,22 @@ methods are intentionally excluded). A companion plugin
 > Not affiliated with, endorsed by, or sponsored by LangChain, AutoGen,
 > or Dify. Integration adapters are community-provided.
 
-## Under review — microsoft/PyRIT
+## Approved by the PyRIT creator — microsoft/PyRIT
 
-A scorer wrapper of this package is under review in
+A scorer wrapper of this package lives in
 **[microsoft/PyRIT PR #3507](https://github.com/microsoft/PyRIT/pull/3507)**
-(`physics_consistency_scorer`). Status as of 2026-11-08: six correctness
-issues raised in first-round review (maintainer + automated reviewer) were
-fixed same-day; the PyRIT creator then pushed four follow-up commits on the
-branch, verified 356 scoped tests, Ruff and the scoped type check, and
-approved the PR ("no blocking concerns remain"). Merge is a separate
-maintainer decision and has not happened yet.
+(`physics_consistency_scorer`). Status as of 2026-11-10:
 
-
-## MCP server
-
-This package doubles as a local MCP server (`stdio` transport). After
-installing, point your MCP client at:
-
-```
-python3 -m phm_lite_check.mcp_server
-```
-
-Exposing three tools: `physics_text_check`, `physics_quantity_check`,
-`robotics_data_check`.
+- Six first-round correctness issues (maintainer + automated reviewer) were
+  fixed same-day (2026-11-08).
+- The PyRIT creator (richlundeen) **approved the PR** ("no blocking concerns
+  remain"), verified 356 scoped tests, Ruff and the scoped type check.
+- He then pushed follow-up integration commits **on this PR's branch**:
+  an upstream-main merge to clear conflicts (eb8948e) and a hook adaptation
+  to the new `ScoringExpectation` scorer API with documented numeric checks
+  (8a163d9).
+- The PR remains open pending the maintainer's merge; nothing is left open
+  on this side.
 
 ## Claimed on MCPush
 
