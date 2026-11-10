@@ -1,5 +1,7 @@
 # phm-lite-check
 
+[![PHM Physics Check MCP server](https://mcprush.com/badge/phm-physics-check-mcp/card.svg)](https://mcprush.com/to/phm-physics-check-mcp?ref=badge)
+
 <!-- mcp-name: io.github.PHM-Audit/phm-lite-check -->
 
 Deterministic physics plausibility checking for **LLM outputs** and
@@ -37,6 +39,10 @@ python3 -m phm_lite_check.mcp_server
 
 Exposing three tools: `physics_text_check`, `physics_quantity_check`,
 `robotics_data_check`.
+
+## Claimed on MCPush
+
+Ownership-verified listing approved on [MCPush](https://mcprush.com/to/phm-physics-check-mcp): security grade A, 3 tools, no sign-in required, local & free (v1.0.1).
 
 ## What it checks
 
