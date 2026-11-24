@@ -7,7 +7,7 @@ name = "phm-lite-check"
 version = "1.0.3"
 description = "Deterministic physics plausibility checking for LLM outputs and robotics datasets (offline subset of the PHM engine). Zero dependencies."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "PHM-Audit" }]
 keywords = [
@@ -30,7 +30,7 @@ classifiers = [
 
 [project.optional-dependencies]
 langchain = ["langchain-core>=0.3"]
-autogen = ["autogen-agentchat>=0.4"]
+autogen = ["autogen-agentchat>=0.4.2"]  # 0.4.0-0.4.1 yanked (GPL accident)
 mcp = ["mcp>=1.0,<2"]
 dev = ["pytest>=7"]
 
