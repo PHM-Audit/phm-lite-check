@@ -1,6 +1,7 @@
 # phm-lite-check
 
 [![PHM Physics Check MCP server](https://mcprush.com/badge/phm-physics-check-mcp/card.svg)](https://mcprush.com/to/phm-physics-check-mcp?ref=badge)
+[![PHM-Audit/phm-lite-check MCP server](https://glama.ai/mcp/servers/PHM-Audit/phm-lite-check/badges/score.svg)](https://glama.ai/mcp/servers/PHM-Audit/phm-lite-check)
 
 <!-- mcp-name: io.github.PHM-Audit/phm-lite-check -->
 
