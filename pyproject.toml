@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "phm-lite-check"
-version = "1.0.1"
+version = "1.0.3"
 description = "Deterministic physics plausibility checking for LLM outputs and robotics datasets (offline subset of the PHM engine). Zero dependencies."
 readme = "README.md"
 requires-python = ">=3.8"
