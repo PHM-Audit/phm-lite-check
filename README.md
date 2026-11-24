@@ -1,7 +1,6 @@
 # phm-lite-check
 
 [![PHM Physics Check MCP server](https://mcprush.com/badge/phm-physics-check-mcp/card.svg)](https://mcprush.com/to/phm-physics-check-mcp?ref=badge)
-[![PHM-Audit/phm-lite-check MCP server](https://glama.ai/mcp/servers/PHM-Audit/phm-lite-check/badges/score.svg)](https://glama.ai/mcp/servers/PHM-Audit/phm-lite-check)
 
 <!-- mcp-name: io.github.PHM-Audit/phm-lite-check -->
 
@@ -128,6 +127,51 @@ assistant = AssistantAgent(
     tools=autogen_tool.get_autogen_tools(),
 )
 ```
+
+## Quickstart — MCP server (stdio)
+
+The package ships a Model Context Protocol server entry point (`phm_lite_check/mcp_server.py`,
+FastMCP, **stdio transport**). Works with Claude Desktop, Cursor, Cline or any MCP host.
+
+Install with the MCP extra (requires `mcp>=1.0,<2` — the 2.x SDK renamed the FastMCP API):
+
+```bash
+pip install "phm-lite-check[mcp]"
+```
+
+Run the server:
+
+```bash
+python3 -m phm_lite_check.mcp_server
+```
+
+Claude Desktop / generic MCP host configuration (`claude_desktop_config.json`):
+
+```json
+{
+  "mcpServers": {
+    "phm-lite-check": {
+      "command": "python3",
+      "args": ["-m", "phm_lite_check.mcp_server"]
+    }
+  }
+}
+```
+
+Tools exposed over MCP (all declared `readOnlyHint`):
+
+| Tool | Input | Checks |
+|---|---|---|
+| `physics_text_check` | `{"text": "..."}` | unit inconsistency, lightspeed violations, probabilities outside [0,1], kinematic impossibilities |
+| `physics_quantity_check` | `{"value": 5.5, "unit": "km/s"}` | per-quantity physical bounds |
+| `robotics_data_check` | `{"record_json": "{...}"}` | quaternion normalization, timestamp sanity, NaN/Inf scan, unit annotation |
+
+Verified end-to-end on `mcp` 1.30.0: JSON-RPC initialize handshake, `tools/list` returns the three
+tools above, and a `tools/call` round-trip on `physics_quantity_check` executes against the local
+rule table. The server makes zero network calls.
+
+Also packaged as an MCPB bundle and listed in the official MCP Registry
+(`io.github.PHM-Audit/phm-lite-check@1.0.1`, stdio).
 
 ## Tools exposed by both adapters
 

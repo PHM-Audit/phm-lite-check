@@ -31,7 +31,7 @@ classifiers = [
 [project.optional-dependencies]
 langchain = ["langchain-core>=0.3"]
 autogen = ["autogen-agentchat>=0.4"]
-mcp = ["mcp>=1.0"]
+mcp = ["mcp>=1.0,<2"]
 dev = ["pytest>=7"]
 
 [project.urls]
