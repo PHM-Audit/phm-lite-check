@@ -188,6 +188,31 @@ pip install -e ".[dev]"
 pytest tests/ -q
 ```
 
+
+## Third-party trial feedback
+
+Independent trial reports of phm-lite-check are welcome. Published reports
+carry attribution exactly as the author prefers (handle, real name, or org).
+
+Report template — fill in only what you actually ran, and mark anything you
+did not run as **not tested**. No estimated or extrapolated numbers:
+
+- **Environment**: OS / Python version / framework versions
+- **Install**: exact command(s) and wall-clock install time
+- **Package test suite**: command used, pass count / total
+- **Integration example**: what you ran (workflow / cookbook / adapter),
+  one representative input, and the observed exit state (PASS / DEGRADE / VETO)
+- **False-positive traps**: the spec trap cases you exercised and observed behavior
+- **What was NOT tested**: explicit list, so readers can see the boundary
+- **Attribution**: name/handle as you want it spelled
+
+Submission paths:
+
+1. Post the report in the relevant integration thread (for example
+   run-llama/llama_index#24094) and we will mirror it into this section.
+2. Open a PR adding `docs/trials/<handle>-<date>.md`.
+
+
 ## License
 
 MIT
