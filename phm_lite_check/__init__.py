@@ -15,7 +15,7 @@ from .checker import (check_text, full_check, check_quantity,
                       ENGINE_ID, __version__ as _checker_version)
 from .robotics import check_robotics_record
 
-__version__ = "1.0.0"
+__version__ = "1.0.3"
 __all__ = [
     "check_text", "full_check", "check_quantity", "check_probability",
     "check_kinematics", "check_conservation", "check_robotics_record",
