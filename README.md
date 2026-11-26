@@ -191,7 +191,10 @@ pytest tests/ -q
 
 ## Third-party trial feedback
 
-Independent trial reports of phm-lite-check are welcome. Published reports
+Independent trial reports of phm-lite-check are welcome.
+
+**Published trials:**
+- [`docs/trials/ZYZ666-RGB-20261126.md`](docs/trials/ZYZ666-RGB-20261126.md) — full reproduction on Python 3.13.5 / Debian 13: 36/36 tests, cookbook executed end-to-end, packaging metadata bug surfaced (fixed in beaf526). Published reports
 carry attribution exactly as the author prefers (handle, real name, or org).
 
 Report template — fill in only what you actually ran, and mark anything you
